@@ -48432,7 +48432,8 @@
 						"header": [
 							{
 								"key": "Accept",
-								"value": "application/json"
+								"value": "application/json",
+								"disabled": true
 							}
 						],
 						"url": {
@@ -66299,12 +66300,12 @@
 	],
 	"variable": [
 		{
-			"id": "f7e043fa-3579-4696-82a6-9ad5b0712d70",
+			"id": "927f14ed-f3b9-40cc-925f-8be9fabfc9bc",
 			"key": "tenant",
 			"value": "outbrain"
 		},
 		{
-			"id": "e96167fc-f18e-40ab-a902-abda79316565",
+			"id": "3e33862f-8bc1-40a2-b3ae-1e68c949a62d",
 			"key": "baseUrl",
 			"value": "https://{{tenant}}.api.identitynow.com/v3"
 		}
