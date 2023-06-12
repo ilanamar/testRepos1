@@ -66245,51 +66245,17 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "b35bfb19-2096-4d02-b6ba-e185757117db",
+				"id": "0e8981c7-7a02-4f4a-b12b-6e994d024181",
 				"type": "text/javascript",
 				"exec": [
-					"const tokenUrl = pm.environment.get( 'api-url' ) + '/oauth/token';",
-					"const clientId = pm.environment.get(\"pat-id\");",
-					"const clientSecret = pm.environment.get(\"pat-secret\");",
-					"",
-					"const getTokenRequest = {",
-					"  method: 'POST',",
-					"  url: tokenUrl,",
-					"  body: {",
-					"      mode: 'formdata',",
-					"      formdata: [",
-					"          { key: 'grant_type', value: 'client_credentials' },",
-					"          { key: 'client_id', value: clientId },",
-					"          { key: 'client_secret', value: clientSecret }",
-					"      ]",
-					"  }",
-					"};",
-					"",
-					"",
-					"var moment = require('moment');",
-					"if(!pm.environment.has('time')){",
-					"    pm.environment.set('time',moment());",
-					"}",
-					"",
-					"if(moment(pm.environment.get('time')) < moment())",
-					"{",
-					"    var time = moment();",
-					"    time.add(12,'hours');",
-					"    pm.environment.set('time',time);",
-					"    pm.sendRequest(getTokenRequest, (err, response) => {",
-					"    const jsonResponse = response.json();",
-					"    const newAccessToken = jsonResponse.access_token;",
-					"    pm.environment.set('access_token', newAccessToken);",
-					"});",
-					"",
-					"}"
+					""
 				]
 			}
 		},
 		{
 			"listen": "test",
 			"script": {
-				"id": "89931a8d-a01f-40c5-a08e-66b976fcaffa",
+				"id": "cc5102d6-7c1e-4ea6-8deb-c7edf5b6b8b3",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -66299,12 +66265,12 @@
 	],
 	"variable": [
 		{
-			"id": "ab11ab9d-ca48-44af-bf4d-70b870c33ac7",
+			"id": "1c427503-e4f5-4bee-ac5c-90d8d820cf77",
 			"key": "tenant",
 			"value": "outbrain"
 		},
 		{
-			"id": "ccabca94-4484-41d1-affd-e5e7892c5a10",
+			"id": "f5a6b9f5-cebf-4eaa-92df-1ed8faf7a2e2",
 			"key": "baseUrl",
 			"value": "https://{{tenant}}.api.identitynow.com/v3"
 		}
