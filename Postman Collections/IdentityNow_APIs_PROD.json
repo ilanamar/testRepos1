@@ -50218,7 +50218,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n  {\n    \"op\": \"add\",\n    \"path\": \"/connectorAttributes/disableOrderingCheck\",\n    \"value\": \"true\"\n  }\n]\n",
+							"raw": "[\n  {\n    \"op\": \"add\",\n    \"path\": \"/connectorAttributes/disableOrderingCheck\",\n    \"value\": \"true\"\n  }\n]",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -66249,12 +66249,12 @@
 	],
 	"variable": [
 		{
-			"id": "39a6e13e-dfbc-40b7-bfdf-cce14c248dd8",
+			"id": "6179461c-1f8e-4842-b091-35ad407ee65d",
 			"key": "tenant",
 			"value": "outbrain"
 		},
 		{
-			"id": "deba07f8-ff54-433b-86a5-b21a7e93f1d9",
+			"id": "0e908f03-0a1f-4000-b0fc-abfa6be4887d",
 			"key": "baseUrl",
 			"value": "https://{{tenant}}.api.identitynow.com/v3"
 		}
