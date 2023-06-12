@@ -50225,23 +50225,7 @@
 								}
 							}
 						},
-						"url": {
-							"raw": "{{baseUrl}}/sources/:id",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"sources",
-								":id"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": "0cc386264f6b4f01900e24e7a8d10697",
-									"description": "(Required) The Source id"
-								}
-							]
-						},
+						"url": "{{baseUrl}}/sources/2c91808780ae96c90180b8a707204ae8",
 						"description": "This API partially updates a source in IdentityNow, using a list of patch operations according to the\n[JSON Patch](https://tools.ietf.org/html/rfc6902) standard.\n\nSome fields are immutable and cannot be changed, such as:\n\n* idn type\n* authoritative\n* created\n* modified\n* connector\n* connectorClass\n* passwordPolicies\n\nAttempts to modify these fields will result in a 400 error.\n\nA token with ORG_ADMIN, SOURCE_ADMIN, SOURCE_SUBADMIN, or API authority is required to call this API.\n"
 					},
 					"response": [
@@ -66265,12 +66249,12 @@
 	],
 	"variable": [
 		{
-			"id": "1c427503-e4f5-4bee-ac5c-90d8d820cf77",
+			"id": "b0673882-616d-4c1e-859e-7061699ef0c5",
 			"key": "tenant",
 			"value": "outbrain"
 		},
 		{
-			"id": "f5a6b9f5-cebf-4eaa-92df-1ed8faf7a2e2",
+			"id": "c4e93065-5062-47ee-a557-f9ca6ad169f1",
 			"key": "baseUrl",
 			"value": "https://{{tenant}}.api.identitynow.com/v3"
 		}
