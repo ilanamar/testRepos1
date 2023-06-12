@@ -48428,12 +48428,6 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0ZW5hbnRfaWQiOiJjMjE2NTk1NS0yOTYxLTQ3MDItYmI2Zi1lN2QxZGQzODU0ZGQiLCJwb2QiOiJwcmQwNy11c2Vhc3QxIiwic3Ryb25nX2F1dGhfc3VwcG9ydGVkIjpmYWxzZSwib3JnIjoib3V0YnJhaW4iLCJpZGVudGl0eV9pZCI6IjJjOTE4MDg3ODBhZTk2ZDAwMTgwYjhhNmZmMTIxMTUwIiwidXNlcl9uYW1lIjoiSWxhbiBBbWFyIiwic2NvcGUiOlsiQmc9PSJdLCJzdHJvbmdfYXV0aCI6dHJ1ZSwiZXhwIjoxNjg2NjA4Mzc1LCJhdXRob3JpdGllcyI6WyJPUkdfQURNSU4iLCJzcDp1c2VyIl0sImp0aSI6IkZRS21NRldCTHBoeThFWGlCTjFQRjJnZWdDbyIsImNsaWVudF9pZCI6Ijk1ZjAxZTVjNzM4ZDRlMGRiNWE2MjJhNWEzMjlmOTkzIn0.vLKOGV8R1UpIGgyCbD_aRJLQZAK4yZw57DTnsFzrYyc"
-							}
-						},
 						"method": "GET",
 						"header": [
 							{
@@ -66305,12 +66299,12 @@
 	],
 	"variable": [
 		{
-			"id": "c3cc03aa-4f86-4487-9340-2f09cd6be66a",
+			"id": "df7d2aad-4f80-4fc6-ba8a-99cc99e958fb",
 			"key": "tenant",
 			"value": "outbrain"
 		},
 		{
-			"id": "ab4e602c-59c3-4a3c-9d0e-a793021189e2",
+			"id": "66603f17-3922-4343-bea3-8035119a3046",
 			"key": "baseUrl",
 			"value": "https://{{tenant}}.api.identitynow.com/v3"
 		}
