@@ -48428,12 +48428,6 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0ZW5hbnRfaWQiOiJjMjE2NTk1NS0yOTYxLTQ3MDItYmI2Zi1lN2QxZGQzODU0ZGQiLCJwb2QiOiJwcmQwNy11c2Vhc3QxIiwic3Ryb25nX2F1dGhfc3VwcG9ydGVkIjpmYWxzZSwib3JnIjoib3V0YnJhaW4iLCJpZGVudGl0eV9pZCI6IjJjOTE4MDg3ODBhZTk2ZDAwMTgwYjhhNmZmMTIxMTUwIiwidXNlcl9uYW1lIjoiSWxhbiBBbWFyIiwic2NvcGUiOlsiQmc9PSJdLCJzdHJvbmdfYXV0aCI6dHJ1ZSwiZXhwIjoxNjg2NjA4NjczLCJhdXRob3JpdGllcyI6WyJPUkdfQURNSU4iLCJzcDp1c2VyIl0sImp0aSI6IlVCMldHYkphNHoyUkZrWkFTcEtnclZFdEFoWSIsImNsaWVudF9pZCI6Ijk1ZjAxZTVjNzM4ZDRlMGRiNWE2MjJhNWEzMjlmOTkzIn0.06BXeIjC2rixn4TcfB2PzetG1N_uEam8JfZYRXX2y6U"
-							}
-						},
 						"method": "GET",
 						"header": [
 							{
@@ -50231,23 +50225,7 @@
 								}
 							}
 						},
-						"url": {
-							"raw": "{{baseUrl}}/sources/:id",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"sources",
-								":id"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": "0cc386264f6b4f01900e24e7a8d10697",
-									"description": "(Required) The Source id"
-								}
-							]
-						},
+						"url": "{{baseUrl}}/sources/1adc279aa06e47aabd45438e522ba043",
 						"description": "This API partially updates a source in IdentityNow, using a list of patch operations according to the\n[JSON Patch](https://tools.ietf.org/html/rfc6902) standard.\n\nSome fields are immutable and cannot be changed, such as:\n\n* idn type\n* authoritative\n* created\n* modified\n* connector\n* connectorClass\n* passwordPolicies\n\nAttempts to modify these fields will result in a 400 error.\n\nA token with ORG_ADMIN, SOURCE_ADMIN, SOURCE_SUBADMIN, or API authority is required to call this API.\n"
 					},
 					"response": [
@@ -66251,51 +66229,17 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "b35bfb19-2096-4d02-b6ba-e185757117db",
+				"id": "0e8981c7-7a02-4f4a-b12b-6e994d024181",
 				"type": "text/javascript",
 				"exec": [
-					"const tokenUrl = pm.environment.get( 'api-url' ) + '/oauth/token';",
-					"const clientId = pm.environment.get(\"pat-id\");",
-					"const clientSecret = pm.environment.get(\"pat-secret\");",
-					"",
-					"const getTokenRequest = {",
-					"  method: 'POST',",
-					"  url: tokenUrl,",
-					"  body: {",
-					"      mode: 'formdata',",
-					"      formdata: [",
-					"          { key: 'grant_type', value: 'client_credentials' },",
-					"          { key: 'client_id', value: clientId },",
-					"          { key: 'client_secret', value: clientSecret }",
-					"      ]",
-					"  }",
-					"};",
-					"",
-					"",
-					"var moment = require('moment');",
-					"if(!pm.environment.has('time')){",
-					"    pm.environment.set('time',moment());",
-					"}",
-					"",
-					"if(moment(pm.environment.get('time')) < moment())",
-					"{",
-					"    var time = moment();",
-					"    time.add(12,'hours');",
-					"    pm.environment.set('time',time);",
-					"    pm.sendRequest(getTokenRequest, (err, response) => {",
-					"    const jsonResponse = response.json();",
-					"    const newAccessToken = jsonResponse.access_token;",
-					"    pm.environment.set('access_token', newAccessToken);",
-					"});",
-					"",
-					"}"
+					""
 				]
 			}
 		},
 		{
 			"listen": "test",
 			"script": {
-				"id": "89931a8d-a01f-40c5-a08e-66b976fcaffa",
+				"id": "cc5102d6-7c1e-4ea6-8deb-c7edf5b6b8b3",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -66305,12 +66249,12 @@
 	],
 	"variable": [
 		{
-			"id": "6b7bf7cf-58f9-4076-806a-20f167152ef5",
+			"id": "9308b496-d65b-43da-bacf-28cf20c06579",
 			"key": "tenant",
 			"value": "outbrain"
 		},
 		{
-			"id": "bf2fae63-a20e-42a9-8eeb-9f9f964c84c8",
+			"id": "8d1164e3-efc3-4c1d-b267-95489aad2a82",
 			"key": "baseUrl",
 			"value": "https://{{tenant}}.api.identitynow.com/v3"
 		}
