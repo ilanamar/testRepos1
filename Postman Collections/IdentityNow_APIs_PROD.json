@@ -49384,24 +49384,7 @@
 								"value": "application/json"
 							}
 						],
-						"url": {
-							"raw": "{{baseUrl}}/sources/:id",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"sources",
-								":id"
-							],
-							"variable": [
-								{
-									"id": "8d09bb8d-5191-4cfc-8fce-a29221abb6e1",
-									"key": "id",
-									"value": "b45b5b9e3f19496f9d6bc11301490a24",
-									"description": "(Required) The Source id"
-								}
-							]
-						},
+						"url": "{{baseUrl}}/sources/c9293d16be084db59d6c895111585cec",
 						"description": "This end-point gets a specific source in IdentityNow.\nA token with ORG_ADMIN, SOURCE_ADMIN, or SOURCE_SUBADMIN authority is required to call this API."
 					},
 					"response": [
@@ -50199,7 +50182,7 @@
 					]
 				},
 				{
-					"name": "Update Source (Partial) - disableOrderingCheck",
+					"name": "Update Source (Partial) - disableOrderingCheck (3)",
 					"id": "5ed9aad9-8c89-423e-a4a0-b9e86fd95539",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -50225,7 +50208,7 @@
 								}
 							}
 						},
-						"url": "{{baseUrl}}/sources/1adc279aa06e47aabd45438e522ba043",
+						"url": "{{baseUrl}}/sources/c9293d16be084db59d6c895111585cec",
 						"description": "This API partially updates a source in IdentityNow, using a list of patch operations according to the\n[JSON Patch](https://tools.ietf.org/html/rfc6902) standard.\n\nSome fields are immutable and cannot be changed, such as:\n\n* idn type\n* authoritative\n* created\n* modified\n* connector\n* connectorClass\n* passwordPolicies\n\nAttempts to modify these fields will result in a 400 error.\n\nA token with ORG_ADMIN, SOURCE_ADMIN, SOURCE_SUBADMIN, or API authority is required to call this API.\n"
 					},
 					"response": [
