@@ -48422,7 +48422,7 @@
 			"name": "Sources ***",
 			"item": [
 				{
-					"name": "Lists all sources in IdentityNow.",
+					"name": "Lists all sources in IdentityNow. (1)",
 					"id": "00da1e88-1a9c-46a2-8b3e-cf100b51a552",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -49371,7 +49371,7 @@
 					]
 				},
 				{
-					"name": "Get Source by ID",
+					"name": "Get Source by ID (2)",
 					"id": "5259b342-e651-4bcb-9565-27a5b65f2968",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
