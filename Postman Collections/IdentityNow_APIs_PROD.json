@@ -49384,7 +49384,7 @@
 								"value": "application/json"
 							}
 						],
-						"url": "{{baseUrl}}/sources/c9293d16be084db59d6c895111585cec",
+						"url": "{{baseUrl}}/sources/1adc279aa06e47aabd45438e522ba043",
 						"description": "This end-point gets a specific source in IdentityNow.\nA token with ORG_ADMIN, SOURCE_ADMIN, or SOURCE_SUBADMIN authority is required to call this API."
 					},
 					"response": [
