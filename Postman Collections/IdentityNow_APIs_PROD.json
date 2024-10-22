@@ -50208,7 +50208,7 @@
 								}
 							}
 						},
-						"url": "{{baseUrl}}/sources/c9293d16be084db59d6c895111585cec",
+						"url": "{{baseUrl}}/sources/1d084a9ba49749f9b9c214a7a17719ad",
 						"description": "This API partially updates a source in IdentityNow, using a list of patch operations according to the\n[JSON Patch](https://tools.ietf.org/html/rfc6902) standard.\n\nSome fields are immutable and cannot be changed, such as:\n\n* idn type\n* authoritative\n* created\n* modified\n* connector\n* connectorClass\n* passwordPolicies\n\nAttempts to modify these fields will result in a 400 error.\n\nA token with ORG_ADMIN, SOURCE_ADMIN, SOURCE_SUBADMIN, or API authority is required to call this API.\n"
 					},
 					"response": [
