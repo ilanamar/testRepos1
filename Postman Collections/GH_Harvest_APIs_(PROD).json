@@ -19,8 +19,8 @@
 			"response": []
 		},
 		{
-			"name": "Create Candidiate",
-			"id": "624d52b9-5a90-498b-b367-384e4b2cf56e",
+			"name": "List Users",
+			"id": "15edf59f-954c-4c5d-8d2c-b04065c63f57",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -28,6 +28,34 @@
 				"method": "GET",
 				"header": [],
 				"url": "https://harvest.greenhouse.io/v1/candidates/6694605101"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Candidiate",
+			"id": "624d52b9-5a90-498b-b367-384e4b2cf56e",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "On-Behalf-Of",
+						"value": "4031255101",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"first_name\": \"Test\",\n  \"last_name\": \"Locke\",\n  \"company\": \"The Tustin Box Company\",\n  \"title\": \"Customer Success Representative\",\n  \"is_private\": false,\n  \"phone_numbers\": [\n    {\n      \"value\": \"555-1212\",\n      \"type\": \"mobile\"\n    }\n  ],\n  \"email_addresses\": [\n    {\n      \"value\": \"john.locke+work@example.com\",\n      \"type\": \"work\"\n    },\n    {\n      \"value\": \"john.locke@example.com\",\n      \"type\": \"personal\"\n    }\n  ],\n  \"employments\": [\n      {\n          \"company_name\": \"Test Employer\",\n          \"title\": \"Test Engineer\",\n          \"start_date\": \"2012-08-15T00:00:00.000Z\",\n          \"end_date\": \"2016-05-15T00:00:00.000Z\"\n      }\n  ],\n  \"applications\": [\n    {\n      \"job_id\": 4033359101\n    }\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://harvest.greenhouse.io/v1/candidates"
 			},
 			"response": []
 		},
