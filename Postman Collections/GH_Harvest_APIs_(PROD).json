@@ -19,6 +19,19 @@
 			"response": []
 		},
 		{
+			"name": "List Sources",
+			"id": "a3fab772-4eb8-43b9-af77-e54046b9a939",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://harvest.greenhouse.io/v1/candidates/6694605101"
+			},
+			"response": []
+		},
+		{
 			"name": "Get Applications",
 			"id": "3060c9c8-e4b0-45d9-9988-f9e27b68c401",
 			"protocolProfileBehavior": {
