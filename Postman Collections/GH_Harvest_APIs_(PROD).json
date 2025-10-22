@@ -45,6 +45,37 @@
 			"request": {
 				"method": "GET",
 				"header": [],
+				"url": {
+					"raw": "https://harvest.greenhouse.io/v1/users?email=itamir@outbrain.com",
+					"protocol": "https",
+					"host": [
+						"harvest",
+						"greenhouse",
+						"io"
+					],
+					"path": [
+						"v1",
+						"users"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "itamir@outbrain.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Users Copy",
+			"id": "d8eb5d12-664b-46fe-8aa4-4ebd22dc88b8",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
 				"url": "https://harvest.greenhouse.io/v1/users"
 			},
 			"response": []
