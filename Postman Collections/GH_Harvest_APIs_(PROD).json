@@ -69,6 +69,37 @@
 		},
 		{
 			"name": "List Users Copy",
+			"id": "1c9a4916-6990-4ad0-ab92-3a47fead5b48",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://harvest.greenhouse.io/v1/users?email=itamir@outbrain.com",
+					"protocol": "https",
+					"host": [
+						"harvest",
+						"greenhouse",
+						"io"
+					],
+					"path": [
+						"v1",
+						"users"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "itamir@outbrain.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Users Copy",
 			"id": "d8eb5d12-664b-46fe-8aa4-4ebd22dc88b8",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
@@ -226,6 +257,34 @@
 					}
 				},
 				"url": "https://harvest.greenhouse.io/v1/applications/7203601101/hire"
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"id": "ae7ef305-c711-4ae2-96f5-4fb90ee477ac",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "On-Behalf-Of",
+						"value": "4053911101",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"id\": 4031661101,\n        \"name\": \"Ilan Amar\",\n        \"first_name\": \"Ilan\",\n        \"last_name\": \"Amar\",\n        \"primary_email_address\": \"ilan.amar@teads.com\",\n        \"disabled\": false,\n        \"site_admin\": false,\n        \"emails\": [\n            \"iamar@outbrain.com\",\n            \"ilan.amar@teads.com\"\n        ],\n        \"employee_id\": \"1429\",\n        \"linked_candidate_ids\": [],\n        \"offices\": [],\n        \"departments\": []\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://harvest.greenhouse.io/v1/user/4031661101"
 			},
 			"response": []
 		},
