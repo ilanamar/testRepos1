@@ -267,24 +267,24 @@
 				"disableBodyPruning": true
 			},
 			"request": {
-				"method": "POST",
+				"method": "PATCH",
 				"header": [
 					{
 						"key": "On-Behalf-Of",
-						"value": "4053911101",
+						"value": "4327985101",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "[\n    {\n        \"id\": 4031661101,\n        \"name\": \"Ilan Amar\",\n        \"first_name\": \"Ilan\",\n        \"last_name\": \"Amar\",\n        \"primary_email_address\": \"ilan.amar@teads.com\",\n        \"disabled\": false,\n        \"site_admin\": false,\n        \"emails\": [\n            \"iamar@outbrain.com\",\n            \"ilan.amar@teads.com\"\n        ],\n        \"employee_id\": \"1429\",\n        \"linked_candidate_ids\": [],\n        \"offices\": [],\n        \"departments\": []\n    }\n]",
+					"raw": "{\n    \"user\": {\n        \"employee_id\": \"1429\"\n    },\n    \"payload\": {\n        \"primary_email_address\": \"ilan.amar@teads.com\",\n        \"emails\": [\n            \"iamar@outbrain.com\",\n            \"ilan.amar@teads.com\"\n        ]\n    }\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "https://harvest.greenhouse.io/v1/user/4031661101"
+				"url": "https://harvest.greenhouse.io/v2/users"
 			},
 			"response": []
 		},
