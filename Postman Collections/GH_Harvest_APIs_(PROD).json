@@ -59,7 +59,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://harvest.greenhouse.io/v1/users?email=itamir@outbrain.com",
+					"raw": "https://harvest.greenhouse.io/v1/users?disable=false&page=1&per_page=500",
 					"protocol": "https",
 					"host": [
 						"harvest",
@@ -72,8 +72,16 @@
 					],
 					"query": [
 						{
-							"key": "email",
-							"value": "itamir@outbrain.com"
+							"key": "disable",
+							"value": "false"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "per_page",
+							"value": "500"
 						}
 					]
 				}
