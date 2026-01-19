@@ -45,25 +45,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": {
-					"raw": "https://harvest.greenhouse.io/v1/users?email=itamir@outbrain.com",
-					"protocol": "https",
-					"host": [
-						"harvest",
-						"greenhouse",
-						"io"
-					],
-					"path": [
-						"v1",
-						"users"
-					],
-					"query": [
-						{
-							"key": "email",
-							"value": "itamir@outbrain.com"
-						}
-					]
-				}
+				"url": "https://harvest.greenhouse.io/v1/users/4031661101"
 			},
 			"response": []
 		},
@@ -285,6 +267,34 @@
 					}
 				},
 				"url": "https://harvest.greenhouse.io/v2/users"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Email to User",
+			"id": "4d29c31d-ccbb-4a07-999e-5bfac5bad1d5",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "On-Behalf-Of",
+						"value": "4327985101",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"ilan.amar@teads.com\"\n ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://harvest.greenhouse.io/v2/users/4031661101"
 			},
 			"response": []
 		},
