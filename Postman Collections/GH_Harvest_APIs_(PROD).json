@@ -287,14 +287,14 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"email\": \"ilan.amar@teads.com\"\n ",
+					"raw": "{\n    \"email\": \"ilan.amar@teads.com\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "https://harvest.greenhouse.io/v2/users/4031661101"
+				"url": "https://harvest.greenhouse.io/v1/users/4031661101/iamar@outbrain.com"
 			},
 			"response": []
 		},
