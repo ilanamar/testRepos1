@@ -45,7 +45,25 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "https://harvest.greenhouse.io/v1/users/4031661101"
+				"url": {
+					"raw": "https://harvest.greenhouse.io/v1/users?email=ilan.amar@teads.com",
+					"protocol": "https",
+					"host": [
+						"harvest",
+						"greenhouse",
+						"io"
+					],
+					"path": [
+						"v1",
+						"users"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "ilan.amar@teads.com"
+						}
+					]
+				}
 			},
 			"response": []
 		},
@@ -289,13 +307,13 @@
 				"header": [
 					{
 						"key": "On-Behalf-Of",
-						"value": "4327985101",
+						"value": "4067770101",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"email\": \"ilan.amar@teads.com\",\n    \"send_verification\": true\n}",
+					"raw": "{\n  \"email\": \"ilan.amar@teads.com\",\n  \"send_verification\": true\n}",
 					"options": {
 						"raw": {
 							"language": "json"
