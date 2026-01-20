@@ -297,6 +297,62 @@
 			"response": []
 		},
 		{
+			"name": "Access Audit Log",
+			"id": "c9615d52-dd01-4bca-b7df-edf613383dd8",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "On-Behalf-Of",
+						"value": "4067770101",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\": {\n        \"employee_id\": \"1429\"\n    },\n    \"payload\": {\n        \"id\": 4031661101,\n        \"name\": \"Ilan Amar\",\n        \"first_name\": \"Ilan\",\n        \"last_name\": \"Amar\",\n        \"primary_email_address\": \"ilan.amar@teads.com\",\n        \"disabled\": false,\n        \"site_admin\": false,\n        \"emails\": [\n            \"ilan.amar@teads.com\",\n            \"iamar@outbrain.com\"\n        ],\n        \"employee_id\": \"1429\",\n        \"linked_candidate_ids\": [],\n        \"offices\": [],\n        \"departments\": []\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://harvest.greenhouse.io/auth/jwt_access_token"
+			},
+			"response": []
+		},
+		{
+			"name": "Access Audit Log Copy",
+			"id": "e2b09294-63bc-48c8-b458-6bb83719761e",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "On-Behalf-Of",
+						"value": "4067770101",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\": {\n        \"employee_id\": \"1429\"\n    },\n    \"payload\": {\n        \"id\": 4031661101,\n        \"name\": \"Ilan Amar\",\n        \"first_name\": \"Ilan\",\n        \"last_name\": \"Amar\",\n        \"primary_email_address\": \"ilan.amar@teads.com\",\n        \"disabled\": false,\n        \"site_admin\": false,\n        \"emails\": [\n            \"ilan.amar@teads.com\",\n            \"iamar@outbrain.com\"\n        ],\n        \"employee_id\": \"1429\",\n        \"linked_candidate_ids\": [],\n        \"offices\": [],\n        \"departments\": []\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://harvest.greenhouse.io/auth/jwt_access_token"
+			},
+			"response": []
+		},
+		{
 			"name": "Add Email to User",
 			"id": "4d29c31d-ccbb-4a07-999e-5bfac5bad1d5",
 			"protocolProfileBehavior": {
