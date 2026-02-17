@@ -69,13 +69,18 @@ async function tracedFetch(
   }
 
   const duration = Math.round(performance.now() - start);
-  const cloned = response.clone();
+  const traceClone = response.clone();
   let responseBody: unknown;
 
   try {
-    responseBody = await cloned.json();
+    const text = await traceClone.text();
+    try {
+      responseBody = JSON.parse(text);
+    } catch {
+      responseBody = text;
+    }
   } catch {
-    responseBody = await cloned.text();
+    responseBody = '(unable to read response)';
   }
 
   const entry: ApiTraceEntry = {
