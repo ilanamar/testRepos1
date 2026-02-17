@@ -1,0 +1,243 @@
+openapi: 3.0.0
+info:
+  description: "This page lists the REST services known as *BrainPower Proxy APIs*."
+  title: API platform
+  version: V1.0
+servers:
+- url: https://apim.workato.com/outbrain/brainpowerapi
+tags:
+- name: Active
+  description: Active services
+- name: Inactive
+  description: Inactive services
+paths:
+  /datapoint/listallregions:
+    get:
+      summary: listAllRegions
+      operationId: '9583003'
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  regions:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                        code:
+                          type: string
+                        name:
+                          type: string
+                        active:
+                          type: boolean
+      security:
+      - api_key: []
+      tags:
+      - Active
+  /datapoint/listallverticals:
+    get:
+      summary: listAllVerticals
+      operationId: '9583004'
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  categories:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                        code:
+                          type: string
+                        name:
+                          type: string
+                        active:
+                          type: boolean
+      security:
+      - api_key: []
+      tags:
+      - Active
+  /datapoint/listdatapointbysearchcriteria:
+    post:
+      summary: listDatapointBySearchCriteria
+      operationId: '9583005'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                datapointType:
+                  type: string
+                verticalCode:
+                  type: string
+                regionCode:
+                  type: string
+                periodStart:
+                  type: string
+                  format: date
+                includeWoWValues:
+                  type: integer
+                qcStatus:
+                  type: string
+              required:
+                - datapointType
+                - verticalCode
+                - regionCode
+                - periodStart
+                - includeWoWValues
+                - qcStatus
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  body:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        datapointId:
+                          type: string
+                        datapointType:
+                          type: object
+                          properties:
+                            code:
+                              type: string
+                            name:
+                              type: string
+                        vertical:
+                          type: object
+                          properties:
+                            code:
+                              type: string
+                            name:
+                              type: string
+                        region:
+                          type: object
+                          properties:
+                            code:
+                              type: string
+                            name:
+                              type: string
+                        periodType:
+                          type: string
+                        periodStart:
+                          type: integer
+                        periodEnd:
+                          type: integer
+                        qcStatus:
+                          type: string
+                        insightText:
+                          type: string
+                        datapointLines:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              dataPointLineId:
+                                type: integer
+                              key:
+                                type: object
+                                properties:
+                                  keyword:
+                                    type: string
+                                  empty:
+                                    type: boolean
+                              values:
+                                type: object
+                                properties:
+                                  ctr:
+                                    type: number
+                                  impression:
+                                    type: number
+                                  clicks:
+                                    type: number
+                                  empty:
+                                    type: boolean
+      security:
+      - api_key: []
+      tags:
+      - Active
+  /period/listtimeperiods:
+    get:
+      summary: ListTimePeriods
+      operationId: '9583002'
+      parameters:
+        - name: state
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: limit
+          in: query
+          required: false
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  periods:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                        code:
+                          type: string
+                        startDate:
+                          type: string
+                        endDate:
+                          type: string
+                        state:
+                          type: string
+                        createdDate:
+                          type: string
+                        modifiedDate:
+                          type: string
+                        logicalName:
+                          type: string
+                        compareDisabled:
+                          type: boolean
+      security:
+      - api_key: []
+      tags:
+      - Active
+components:
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: API-TOKEN
+      in: header
