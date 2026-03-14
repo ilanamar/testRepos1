@@ -548,7 +548,7 @@
 			"response": []
 		},
 		{
-			"name": "New Request",
+			"name": "Hired Webhook Example",
 			"id": "c2da7726-c8d9-4af6-94aa-2893b3ae110c",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
